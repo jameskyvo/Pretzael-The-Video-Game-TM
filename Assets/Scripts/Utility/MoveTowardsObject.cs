@@ -15,6 +15,10 @@ public class MoveTowardsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (otherObject == null)
+        {
+            return;
+        }
 
         Vector2 movementDir = (otherObject.position - transform.position).normalized;
 
