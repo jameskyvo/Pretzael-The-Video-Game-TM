@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         rb = GetComponent<Rigidbody2D>();
 
-        // prevents player from leaving the bounds halfway
+        // Prevents player from leaving the bounds halfway
         objectWidth = transform.GetComponent<SpriteRenderer>().bounds.extents.x;
         objectHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
     }
@@ -33,12 +33,12 @@ public class PlayerMovement : MonoBehaviour
 
     void LateUpdate() // Use LateUpdate to ensure all movement logic is finished
     {
-        Vector3 viewPos = transform.position;
+        Vector3 currentPos = transform.position;
 
         // Clamp the position within calculated world-space bounds
-        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth);
-        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
+        currentPos.x = Mathf.Clamp(currentPos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth);
+        currentPos.y = Mathf.Clamp(currentPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
 
-        transform.position = viewPos;
+        transform.position = currentPos;
     }
 }
