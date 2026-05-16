@@ -14,6 +14,10 @@ public class Health : MonoBehaviour
     {
         if (health <= 0)
         {
+            if (gameObject.tag == "Player")
+            {
+                GameOver();
+            }
             Destroy(gameObject);
         }
     }
@@ -21,5 +25,10 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+    }
+
+    public void GameOver()
+    {
+        GameManager.instance.GameOver();
     }
 }
