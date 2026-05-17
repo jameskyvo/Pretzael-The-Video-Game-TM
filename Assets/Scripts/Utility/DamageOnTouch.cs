@@ -11,7 +11,7 @@ public class DamageOnTouch : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.GetComponent<Health>())
+        if (collision.gameObject.GetComponent<Health>() && collision.gameObject.tag != gameObject.tag)
         {
             Health targetHealth = collision.gameObject.GetComponent<Health>();
 

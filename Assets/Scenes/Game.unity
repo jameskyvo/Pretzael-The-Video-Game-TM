@@ -255,6 +255,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35053366}
   m_CullTransparentMesh: 1
+--- !u!1 &172257521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
+  m_PrefabInstance: {fileID: 3718822495232396161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &276889416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1523,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f8e8fce8741b4a80021261b06b3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1654331659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654331661}
+  - component: {fileID: 1654331662}
+  m_Layer: 0
+  m_Name: Wave Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654331661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654331659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.74, y: 0.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654331662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654331659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00eff82511c284e40ac55b74ab1c4c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyPrefab: {fileID: 172257521}
+    cost: 1
+  currentWave: 1
+  waveValue: 15
+  enemiesToSpawn: []
+  spawnLocation: {fileID: 1654331661}
+  waveDuration: 20
 --- !u!1 &2018871621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,3 +1752,4 @@ SceneRoots:
   - {fileID: 276889419}
   - {fileID: 2018871625}
   - {fileID: 763960720}
+  - {fileID: 1654331661}
