@@ -255,11 +255,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35053366}
   m_CullTransparentMesh: 1
---- !u!1 &172257521 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-  m_PrefabInstance: {fileID: 3718822495232396161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &276889416
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,11 +891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f8e8fce8741b4a80021261b06b3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &550124391 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8088045604728259561, guid: 9fc64a198f18f5b43a1f276de0e61414, type: 3}
-  m_PrefabInstance: {fileID: 1553231008}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &582977112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,10 +1558,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - enemyPrefab: {fileID: 172257521}
+  - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
     cost: 1
   currentWave: 1
-  waveValue: 15
+  waveValue: 3
   enemiesToSpawn: []
   spawnLocation: {fileID: 1654331661}
   waveDuration: 20
@@ -1680,74 +1670,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &3718822495232396161
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.495196
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.872017
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565044935820610102, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5346250792490520719, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: otherObject
-      value: 
-      objectReference: {fileID: 550124391}
-    - target: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 3718822495232396161}
   - {fileID: 1553231008}
   - {fileID: 276889419}
   - {fileID: 2018871625}

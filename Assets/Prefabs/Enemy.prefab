@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2565044935820610102}
   - component: {fileID: 5279298542479486739}
-  - component: {fileID: 5346250792490520719}
   - component: {fileID: 8189824430471672444}
   - component: {fileID: 5220902051255973736}
   - component: {fileID: 4462610330245489184}
   - component: {fileID: 8875931446450134949}
+  - component: {fileID: -2259246636801912339}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -92,20 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5346250792490520719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8573432126385764169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0000caf0ed0878741a89fa6179e1f3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherObject: {fileID: 0}
-  speed: 3
 --- !u!58 &8189824430471672444
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,3 +181,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionDamage: 1
+--- !u!114 &-2259246636801912339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573432126385764169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd86fd1c0c2e20468c94b26aa98fec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 3

@@ -27,7 +27,7 @@ public class WaveSpawner : MonoBehaviour
     {
         if (spawnTimer <= 0)
         {
-            if (enemiesToSpawn.Count >= 0)
+            if (enemiesToSpawn.Count > 0)
             {
                 Instantiate(enemiesToSpawn[0], spawnLocation.position, Quaternion.identity);
                 enemiesToSpawn.RemoveAt(0);
@@ -47,7 +47,6 @@ public class WaveSpawner : MonoBehaviour
 
     public void GenerateWave()
     {
-        waveValue = currentWave * 10;
         GenerateEnemies();
 
         spawnInterval = waveDuration / enemiesToSpawn.Count;

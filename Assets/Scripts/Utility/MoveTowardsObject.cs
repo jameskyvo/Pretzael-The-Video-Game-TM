@@ -3,7 +3,7 @@ using UnityEngine;
 public class MoveTowardsObject : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Transform otherObject;
+    public Transform otherTransform;
     public float speed = 3.0f;
     private Rigidbody2D rb;
 
@@ -15,12 +15,12 @@ public class MoveTowardsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (otherObject == null)
+        if (otherTransform == null)
         {
             return;
         }
 
-        Vector2 movementDir = (otherObject.position - transform.position).normalized;
+        Vector2 movementDir = (otherTransform.position - transform.position).normalized;
 
         rb.linearVelocity = movementDir * speed;
     }
