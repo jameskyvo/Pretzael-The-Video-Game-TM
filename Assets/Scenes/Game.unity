@@ -1539,7 +1539,7 @@ Transform:
   m_GameObject: {fileID: 1654331659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.74, y: 0.57, z: 0}
+  m_LocalPosition: {x: 0.03, y: 7.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
     cost: 1
   currentWave: 1
-  waveValue: 3
+  waveValue: 15
   enemiesToSpawn: []
   spawnLocation: {fileID: 1654331661}
   waveDuration: 20
