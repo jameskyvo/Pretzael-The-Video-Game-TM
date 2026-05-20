@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{ddd13e9b-b030-4c21-8a9b-618d58f55130}">
+		<property name="name">
+			<value>Title Screen Game State</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1bfa996f-1f3f-4cab-b6e4-a77859dae3eb}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1faa06a1-7cdc-43dc-85d5-51a3140a3f1c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1faa06a1-7cdc-43dc-85d5-51a3140a3f1c}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Title Screen</value>
+			<value>Start Game</value>
+			<value>Quit Game</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

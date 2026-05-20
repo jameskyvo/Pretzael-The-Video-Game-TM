@@ -418,7 +418,7 @@ MonoBehaviour:
       Data2: 1161270355
       Data3: -228463991
       Data4: -180805594
-    Path: event:/TitleTrack
+    Path: event:/Music/TitleTrack
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -426,7 +426,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params: []
+  Params:
+  - Name: Title Screen Game State
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
