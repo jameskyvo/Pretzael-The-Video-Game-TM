@@ -1248,8 +1248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470a92ef3eefc1c4a831d476abd57c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveSpawner: {fileID: 0}
-  waveText: {fileID: 0}
+  waveSpawner: {fileID: 1654331662}
+  waveText: {fileID: 776315222}
 --- !u!114 &776315222
 MonoBehaviour:
   m_ObjectHideFlags: 0
