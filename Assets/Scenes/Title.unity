@@ -418,7 +418,7 @@ MonoBehaviour:
       Data2: 1161270355
       Data3: -228463991
       Data4: -180805594
-    Path: event:/TitleTrack
+    Path: event:/Music/TitleTrack
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -426,7 +426,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params: []
+  Params:
+  - Name: Title Screen Game State
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -821,6 +823,8 @@ GameObject:
   - component: {fileID: 1645599777}
   - component: {fileID: 1645599776}
   - component: {fileID: 1645599779}
+  - component: {fileID: 1645599780}
+  - component: {fileID: 1645599781}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -954,6 +958,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f8e8fce8741b4a80021261b06b3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1645599780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645599774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 19420792
+      Data2: 1271145372
+      Data3: 1026531757
+      Data4: 89323226
+    Path: event:/UI/UI Hover
+  Event: 
+  EventPlayTrigger: 17
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1645599781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645599774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 694986830}
+    Params:
+    - Name: Title Screen Game State
+      Value: 2
+  TriggerEvent: 19
 --- !u!1 &1742276800
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +1021,7 @@ GameObject:
   - component: {fileID: 1742276803}
   - component: {fileID: 1742276802}
   - component: {fileID: 1742276805}
+  - component: {fileID: 1742276806}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1100,6 +1155,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f8e8fce8741b4a80021261b06b3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1742276806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742276800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 19420792
+      Data2: 1271145372
+      Data3: 1026531757
+      Data4: 89323226
+    Path: event:/UI/UI Hover
+  Event: 
+  EventPlayTrigger: 17
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2051020213
 GameObject:
   m_ObjectHideFlags: 0
