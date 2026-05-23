@@ -78,7 +78,6 @@
 		</relationship>
 		<relationship name="modules">
 			<destination>{8e3ab490-740f-47d3-ae81-0348a875e519}</destination>
-			<destination>{841f3b32-f100-466e-ab86-b9cca2a3230f}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{732e3200-6447-4d09-bd28-c89aca59e6d6}</destination>
@@ -86,7 +85,7 @@
 	</object>
 	<object class="GroupTrack" id="{fcb32c92-c7b1-4e59-b31f-136c20ef0c14}">
 		<relationship name="modules">
-			<destination>{e148695a-eb39-4cb1-adad-d961a83f51a0}</destination>
+			<destination>{841f3b32-f100-466e-ab86-b9cca2a3230f}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{e7612912-f302-4b09-a6f4-42c5b0a6813d}</destination>
@@ -97,7 +96,6 @@
 			<destination>{c3481924-3dbe-4155-98b9-1af39267749c}</destination>
 			<destination>{8e3ab490-740f-47d3-ae81-0348a875e519}</destination>
 			<destination>{841f3b32-f100-466e-ab86-b9cca2a3230f}</destination>
-			<destination>{e148695a-eb39-4cb1-adad-d961a83f51a0}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{816ec6ad-f731-43f6-99a7-ce4c924456e8}</destination>
@@ -160,17 +158,6 @@
 			<destination>{4f43e3c0-d042-4c96-b024-2e2ec4c51689}</destination>
 		</relationship>
 	</object>
-	<object class="EventSound" id="{841f3b32-f100-466e-ab86-b9cca2a3230f}">
-		<property name="start">
-			<value>45.636282773919746</value>
-		</property>
-		<property name="length">
-			<value>10.786520833333334</value>
-		</property>
-		<relationship name="event">
-			<destination>{1d3d58a2-46d3-4b8d-a863-723e57d6ffaa}</destination>
-		</relationship>
-	</object>
 	<object class="EventMixerGroup" id="{732e3200-6447-4d09-bd28-c89aca59e6d6}">
 		<property name="volume">
 			<value>-8</value>
@@ -191,15 +178,15 @@
 			<destination>{9c8cbeb2-4e4e-435b-8450-53e934b273f0}</destination>
 		</relationship>
 	</object>
-	<object class="EventSound" id="{e148695a-eb39-4cb1-adad-d961a83f51a0}">
+	<object class="EventSound" id="{841f3b32-f100-466e-ab86-b9cca2a3230f}">
 		<property name="start">
 			<value>32.359541666666665</value>
 		</property>
 		<property name="length">
-			<value>10.786516853932584</value>
+			<value>10.786520833333334</value>
 		</property>
 		<relationship name="event">
-			<destination>{01285678-239c-4bc4-ada1-2f3ddaf65205}</destination>
+			<destination>{1d3d58a2-46d3-4b8d-a863-723e57d6ffaa}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{e7612912-f302-4b09-a6f4-42c5b0a6813d}">
