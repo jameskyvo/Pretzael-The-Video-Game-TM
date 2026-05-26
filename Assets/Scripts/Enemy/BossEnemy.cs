@@ -28,9 +28,21 @@ public class BossEnemy : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+        {
+            return;
+        }
     }
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
+
         playerTransform = player.transform;
         if (isSpawning == false)
         {
