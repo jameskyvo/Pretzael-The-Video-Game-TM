@@ -7,8 +7,10 @@ public class BossEnemy : MonoBehaviour
     public GameObject player;
     public GameObject enemyPrefab;
     public int spawnCooldown;
-    public Vector3 spawnOffset = new Vector3(8f, 0f, 0f);
+    public int numToSpawn;
+    public Vector3 spawnOffset = new Vector3(16, 0f, 0f);
 
+    private int verticalSpawnOffset;
     private Transform playerPos;
     private bool isSpawning = false;
 
@@ -20,7 +22,7 @@ public class BossEnemy : MonoBehaviour
 
         if (isSpawning == false)
         {
-            StartCoroutine(SpawnEnemies(spawnCooldown));
+            StartCoroutine(SpawnEnemies(numToSpawn));
         }
     }
 
@@ -41,13 +43,17 @@ public class BossEnemy : MonoBehaviour
         yield return new WaitForSeconds(spawnCooldown);
 
         int halfEnemies = numToSpawn / 2;
+        int verticalVariance = 1;
 
         for (int i = 0; i < halfEnemies; i++)
         {
+            verticalVariance--;
             Instantiate(enemyPrefab, playerPos.position + spawnOffset, Quaternion.identity);
             Instantiate(enemyPrefab, playerPos.position - spawnOffset, Quaternion.identity);
+            yield return new WaitForSeconds(0.02f);
         }
 
+        yield return new WaitForSeconds(spawnCooldown);
         isSpawning = false;
     }
 }

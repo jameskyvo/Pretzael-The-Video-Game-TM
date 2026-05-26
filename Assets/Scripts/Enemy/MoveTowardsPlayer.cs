@@ -5,10 +5,11 @@ public class MoveTowardsPlayer : MonoBehaviour
     public float speed = 3.0f;
     private Transform playerTransform;
     private Rigidbody2D rb;
+    private GameObject player;
 
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
 
         if (player == null)
         {
@@ -21,9 +22,9 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerTransform == null)
+        while (player == null)
         {
-            return;
+            player = GameObject.FindGameObjectWithTag("Player");
         }
 
         Vector2 movementDir = (playerTransform.position - transform.position).normalized;

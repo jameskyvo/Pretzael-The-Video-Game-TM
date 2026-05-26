@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 131491365}
   - component: {fileID: 131491364}
   - component: {fileID: 131491367}
+  - component: {fileID: 131491368}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -299,6 +300,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+--- !u!114 &131491368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131491361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a730095b74f52224dbb7561473816b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 929400345}
+  enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
+  spawnCooldown: 3
+  numToSpawn: 6
+  spawnOffset: {x: 28, y: 0, z: 0}
+--- !u!1 &929400345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6197924324928275429, guid: 9fc64a198f18f5b43a1f276de0e61414, type: 3}
+  m_PrefabInstance: {fileID: 2034609897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1863108418
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +424,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6197924324928275429, guid: 9fc64a198f18f5b43a1f276de0e61414, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197924324928275429, guid: 9fc64a198f18f5b43a1f276de0e61414, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8088045604728259561, guid: 9fc64a198f18f5b43a1f276de0e61414, type: 3}
