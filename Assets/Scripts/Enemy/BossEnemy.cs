@@ -66,12 +66,7 @@ public class BossEnemy : MonoBehaviour
 
         if (numToSpawn == 0 || playerTransform == null)
         {
-            yield return null;
-        }
-
-        if (isSpawning)
-        {
-            yield return null;
+            yield break;
         }
 
         yield return new WaitForSeconds(spawnCooldown);
@@ -93,12 +88,13 @@ public class BossEnemy : MonoBehaviour
 
     IEnumerator Charge()
     {
+        if (player == null)
+        {
+            yield break;
+        }
+
         isCharging = true;
 
-        if (isCharging)
-        {
-            yield return null;
-        }
         // Shake camera
 
         // Play charge sound
@@ -138,11 +134,6 @@ public class BossEnemy : MonoBehaviour
     IEnumerator Shoot()
     {
         isFiring = true;
-
-        if (isFiring)
-        {
-            yield return null;
-        }
 
         for (int i = 0; i < shotAmount; i++)
         {
