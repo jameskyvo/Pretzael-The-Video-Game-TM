@@ -22,11 +22,6 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        while (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
-
         Vector2 movementDir = (playerTransform.position - transform.position).normalized;
 
         rb.linearVelocity = movementDir * speed;
