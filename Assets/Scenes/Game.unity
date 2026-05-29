@@ -1755,10 +1755,6 @@ MonoBehaviour:
   waveDuration: 20
   secondsBetweenWaves: 5
   waves:
-  - waveBudget: 25
-    possibleEnemies:
-    - enemyPrefab: {fileID: 4312718344753033860, guid: 57ed3e22573f6fc4eaa5e33a3ca8a6f8, type: 3}
-      cost: 25
   - waveBudget: 10
     possibleEnemies:
     - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
@@ -1767,6 +1763,10 @@ MonoBehaviour:
     possibleEnemies:
     - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
       cost: 1
+  - waveBudget: 25
+    possibleEnemies:
+    - enemyPrefab: {fileID: 4312718344753033860, guid: 57ed3e22573f6fc4eaa5e33a3ca8a6f8, type: 3}
+      cost: 25
   enemiesToSpawn: []
   spawnTimer: 2
 --- !u!1 &2018871621
