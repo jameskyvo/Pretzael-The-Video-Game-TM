@@ -71,6 +71,11 @@ public class BossEnemy : MonoBehaviour
 
         yield return new WaitForSeconds(spawnCooldown);
 
+        if (numToSpawn == 0 || playerTransform == null)
+        {
+            yield break;
+        }
+
         int halfEnemies = numToSpawn / 2;
         int verticalVariance = 1;
 

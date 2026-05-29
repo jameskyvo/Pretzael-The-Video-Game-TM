@@ -22,6 +22,11 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (player == null)
+        {
+            return;
+        }
+
         Vector2 movementDir = (playerTransform.position - transform.position).normalized;
 
         rb.linearVelocity = movementDir * speed;
