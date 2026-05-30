@@ -14,14 +14,15 @@ public class WaveSpawner : MonoBehaviour
     public int secondsBetweenWaves;
     public List<Wave> waves = new List<Wave>();
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
+    public float spawnTimer;
 
-    private int remainingBudget;
     private float spawnInterval = 1;
     private bool isProgressing = false;
-    public float spawnTimer;
+    private GameObject player;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         GenerateWave();
     }
 
@@ -39,7 +40,7 @@ public class WaveSpawner : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (isProgressing || currentWave >= waves.Count)
+        if (isProgressing || currentWave >= waves.Count || player == null)
         {
             return;
         }
@@ -66,7 +67,11 @@ public class WaveSpawner : MonoBehaviour
 
     public void GenerateWave()
     {
-        GenerateEnemies();
+        if (player != null)
+        {
+            GenerateEnemies();
+        }
+
     }
 
     private void GenerateEnemies()
@@ -76,6 +81,7 @@ public class WaveSpawner : MonoBehaviour
             Debug.Log($"Wave {currentWave} is larger than the list of waves. Ending.");
             return;
         }
+
         List<GameObject> generatedEnemies = new List<GameObject>();
         Wave wave = waves[currentWave];
 
