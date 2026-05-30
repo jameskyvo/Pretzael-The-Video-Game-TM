@@ -79,7 +79,6 @@ public class WaveSpawner : MonoBehaviour
         if (currentWave >= waves.Count)
         {
             Debug.Log($"Wave {currentWave} is larger than the list of waves. Ending.");
-            GameManager.instance.Victory();
             return;
         }
 

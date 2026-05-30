@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 2019867939}
-  victoryCanvas: {fileID: 0}
+  victoryCanvas: {fileID: 1506325365}
 --- !u!4 &763960720
 Transform:
   m_ObjectHideFlags: 0

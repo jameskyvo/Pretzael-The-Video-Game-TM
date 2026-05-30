@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class BossEnemy : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public GameObject enemyPrefab;
     public int spawnCooldown;
     public int numToSpawn;
@@ -148,5 +148,10 @@ public class BossEnemy : MonoBehaviour
 
         yield return new WaitForSeconds(attackCooldown);
         isFiring = false;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.Victory();
     }
 }
