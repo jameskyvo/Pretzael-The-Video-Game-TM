@@ -23,6 +23,5 @@ public class GameManager : MonoBehaviour
     {
         victoryCanvas.SetActive(true);
         player.SetActive(false);
-        
     }
 }
