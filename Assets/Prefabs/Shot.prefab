@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 624711440721274690}
   - component: {fileID: 7508042578478311606}
   - component: {fileID: -2581864259284529096}
+  - component: {fileID: -1865128904459713927}
   m_Layer: 0
   m_Name: Shot
   m_TagString: Untagged
@@ -190,7 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e81c01faf1b8048a0321fe584d49eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnTimer: 5
 --- !u!114 &-2581864259284529096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +204,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionDamage: 1
+--- !u!114 &-1865128904459713927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105934611046483834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537bac96afe7842419da47bac83ec04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
