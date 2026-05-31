@@ -2340,7 +2340,7 @@ Transform:
   m_GameObject: {fileID: 1654331659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0.03, y: 11.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   waveDuration: 20
   secondsBetweenWaves: 5
   waves:
-  - waveBudget: 10
+  - waveBudget: 1
     possibleEnemies:
     - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
       cost: 1
@@ -2371,10 +2371,34 @@ MonoBehaviour:
     possibleEnemies:
     - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
       cost: 1
+  - waveBudget: 8
+    possibleEnemies:
+    - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
+      cost: 1
+  - waveBudget: 12
+    possibleEnemies:
+    - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
+      cost: 1
+  - waveBudget: 16
+    possibleEnemies:
+    - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
+      cost: 1
+  - waveBudget: 25
+    possibleEnemies:
+    - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
+      cost: 1
+  - waveBudget: 50
+    possibleEnemies:
+    - enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
+      cost: 1
   - waveBudget: 25
     possibleEnemies:
     - enemyPrefab: {fileID: 4312718344753033860, guid: 57ed3e22573f6fc4eaa5e33a3ca8a6f8, type: 3}
       cost: 25
+  - waveBudget: 100
+    possibleEnemies:
+    - enemyPrefab: {fileID: 4312718344753033860, guid: 57ed3e22573f6fc4eaa5e33a3ca8a6f8, type: 3}
+      cost: 100
   enemiesToSpawn: []
   spawnTimer: 2
 --- !u!1 &1896611900
