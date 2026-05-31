@@ -154,4 +154,6 @@ public class BossEnemy : MonoBehaviour
     {
         GameManager.instance.Victory();
     }
+
+
 }

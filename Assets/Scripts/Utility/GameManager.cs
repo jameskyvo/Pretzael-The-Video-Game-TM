@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     public void Victory()
     {
         victoryCanvas.SetActive(true);
-        player.SetActive(false);
+
+        if (player != null)
+        {
+            player.SetActive(false);
+        }
     }
 }
