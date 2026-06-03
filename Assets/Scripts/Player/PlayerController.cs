@@ -8,14 +8,18 @@ public class PlayerController : MonoBehaviour
     public GameObject shotPrefab;
     public Transform firePoint;
     public float shotDelaySeconds;
+    public float recoilForce = 5f;
+    public float recoilDecay = 10f;
 
+    private Vector2 recoilVelocity;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
 
-    
+
+
     private bool canFire = true;
     void Start()
     {
@@ -35,13 +39,20 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(SpawnProjectile());
+            StartCoroutine(FireShot());
         }
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+        Vector2 moveVelocity = moveInput.normalized * moveSpeed;
+
+        rb.linearVelocity = moveVelocity + recoilVelocity;
+        recoilVelocity = Vector2.Lerp(
+            recoilVelocity,
+            Vector2.zero,
+            recoilDecay * Time.fixedDeltaTime
+        );
     }
 
     void LateUpdate() // Use LateUpdate to ensure all movement logic is finished
@@ -55,7 +66,7 @@ public class PlayerController : MonoBehaviour
         transform.position = currentPos;
     }
 
-    IEnumerator SpawnProjectile()
+    IEnumerator FireShot()
     {
         if (!canFire)
         {
@@ -64,6 +75,7 @@ public class PlayerController : MonoBehaviour
 
         canFire = false;
 
+        recoilVelocity += -(Vector2)transform.up * recoilForce;
         Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
 
         yield return new WaitForSeconds(shotDelaySeconds);
