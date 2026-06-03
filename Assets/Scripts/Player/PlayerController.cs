@@ -1,14 +1,22 @@
+using System.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float moveSpeed = 5f;
+    public GameObject shotPrefab;
+    public Transform firePoint;
+    public float shotDelaySeconds;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
+
+    
+    private bool canFire = true;
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
@@ -23,7 +31,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");   
+        moveInput.y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(SpawnProjectile());
+        }
     }
 
     private void FixedUpdate()
@@ -40,5 +53,21 @@ public class PlayerMovement : MonoBehaviour
         currentPos.y = Mathf.Clamp(currentPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
 
         transform.position = currentPos;
+    }
+
+    IEnumerator SpawnProjectile()
+    {
+        if (!canFire)
+        {
+            yield break;
+        }
+
+        canFire = false;
+
+        Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
+
+        yield return new WaitForSeconds(shotDelaySeconds);
+
+        canFire = true;
     }
 }
