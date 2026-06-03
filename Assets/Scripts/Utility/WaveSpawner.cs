@@ -9,13 +9,13 @@ using static WaveSpawner;
 public class WaveSpawner : MonoBehaviour
 {
     public int currentWave;
-    public Transform spawnLocation;
     public int waveDuration;
     public int secondsBetweenWaves;
     public List<Wave> waves = new List<Wave>();
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
     public float spawnTimer;
 
+    private List<Transform> spawnPoints;
     private float spawnInterval = 1;
     private bool isProgressing = false;
     private GameObject player;
@@ -23,6 +23,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        spawnPoints = GetAllSpawnPoints();
         GenerateWave();
     }
 
@@ -49,7 +50,10 @@ public class WaveSpawner : MonoBehaviour
             // if theres enemies left to spawn
             if (enemiesToSpawn.Count > 0)
             {
-                Instantiate(enemiesToSpawn[0], spawnLocation.position, Quaternion.identity);
+                int random = UnityEngine.Random.Range(0, spawnPoints.Count - 1);
+                Transform randomPoint = spawnPoints[random];
+
+                Instantiate(enemiesToSpawn[0], randomPoint.position, Quaternion.identity);
                 enemiesToSpawn.RemoveAt(0);
                 // reset spawn timer
                 spawnTimer = spawnInterval;
@@ -71,7 +75,6 @@ public class WaveSpawner : MonoBehaviour
         {
             GenerateEnemies();
         }
-
     }
 
     private void GenerateEnemies()
@@ -106,6 +109,18 @@ public class WaveSpawner : MonoBehaviour
         }
         enemiesToSpawn.Clear();
         enemiesToSpawn = generatedEnemies;
+    }
+    public List<Transform> GetAllSpawnPoints()
+    {
+        List<Transform> spawnPoints = new();
+
+        foreach (Transform childTransform in this.transform)
+        {
+            Transform spawnPoint = childTransform.GetComponent<Transform>();
+            spawnPoints.Add(spawnPoint);
+        }
+
+        return spawnPoints;
     }
 
     // Serializable attribute lets us add and change in editor.
