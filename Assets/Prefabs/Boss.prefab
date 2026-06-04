@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3293314191005673267}
   - component: {fileID: 8110288812725674975}
   - component: {fileID: 8102193263343020058}
+  - component: {fileID: -423838800660456929}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -282,7 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a730095b74f52224dbb7561473816b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   enemyPrefab: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
   spawnCooldown: 3
   numToSpawn: 6
@@ -304,3 +304,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59551582876edcc4f8143c1ee3bd8846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-423838800660456929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312718344753033860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1573669072
+      Data2: 1216141353
+      Data3: 1099170474
+      Data4: -548203915
+    Path: event:/Enemy Sounds/God Spawn
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
