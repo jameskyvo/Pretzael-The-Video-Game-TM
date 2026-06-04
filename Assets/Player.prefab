@@ -45,11 +45,10 @@ GameObject:
   - component: {fileID: 2024186652621414310}
   - component: {fileID: 7313828716265503449}
   - component: {fileID: 3740156349477611159}
-  - component: {fileID: 3309675452092660639}
   - component: {fileID: -5207363393111193969}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,8 +62,8 @@ Transform:
   m_GameObject: {fileID: 6197924324928275429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.599766, y: 0.1633467, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 0.2, y: -3.7, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7657806799587982498}
@@ -211,6 +210,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  shotPrefab: {fileID: 2105934611046483834, guid: 6dab66e34fe38d44ca0d6aad259b6323, type: 3}
+  firePoint: {fileID: 7657806799587982498}
+  shotDelaySeconds: 0.75
+  recoilForce: 5
+  recoilDecay: 10
 --- !u!114 &3740156349477611159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,20 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd1c1ca52b7a9ae4eb2291bc4fadfedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3309675452092660639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6197924324928275429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e872c2c8666e0b8449fb84648971c894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 2105934611046483834, guid: 6dab66e34fe38d44ca0d6aad259b6323, type: 3}
-  firePoint: {fileID: 7657806799587982498}
 --- !u!114 &-5207363393111193969
 MonoBehaviour:
   m_ObjectHideFlags: 0
