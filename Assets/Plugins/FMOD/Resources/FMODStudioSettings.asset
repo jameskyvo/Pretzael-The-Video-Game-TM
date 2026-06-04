@@ -635,7 +635,9 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Enemy Sounds
   - Music
+  - SFX
   - UI
   BanksToLoad: []
   LiveUpdatePort: 9264
