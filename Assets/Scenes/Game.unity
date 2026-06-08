@@ -1374,6 +1374,30 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!1 &530877438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6197924324928275429, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
+  m_PrefabInstance: {fileID: 1553231008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &530877446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530877438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 519420034}
+    Params:
+    - Name: Pretzael State
+      Value: 1
+  TriggerEvent: 2
 --- !u!1 &582977112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,7 +2428,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6197924324928275429, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530877446}
   m_SourcePrefab: {fileID: 100100000, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
 --- !u!1 &1649193347
 GameObject:
