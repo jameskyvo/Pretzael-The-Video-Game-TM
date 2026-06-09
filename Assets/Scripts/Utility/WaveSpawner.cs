@@ -11,9 +11,10 @@ public class WaveSpawner : MonoBehaviour
     public int currentWave;
     public int waveDuration;
     public int secondsBetweenWaves;
+    public float secondsUntilNextSpawn;
+    public int remainingEnemies;
     public List<Wave> waves = new List<Wave>();
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
-    public float spawnTimer;
 
     private List<Transform> spawnPoints;
     private float spawnInterval = 1;
@@ -41,32 +42,42 @@ public class WaveSpawner : MonoBehaviour
     }
     void FixedUpdate()
     {
+        remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
         if (isProgressing || currentWave >= waves.Count || player == null)
         {
             return;
         }
-        if (spawnTimer <= 0 )
-        {
-            // if theres enemies left to spawn
-            if (enemiesToSpawn.Count > 0)
-            {
-                int random = UnityEngine.Random.Range(0, spawnPoints.Count);
-                Transform randomPoint = spawnPoints[random];
 
-                Instantiate(enemiesToSpawn[0], randomPoint.position, Quaternion.identity);
-                enemiesToSpawn.RemoveAt(0);
-                // reset spawn timer
-                spawnTimer = spawnInterval;
-            } else
-            {
-                // Wait for 5 seconds
-                StartCoroutine(WaitFornextWave());
-            }
-        }
-        else
+        if (secondsUntilNextSpawn > 0)
         {
-            spawnTimer -= Time.fixedDeltaTime;
+            secondsUntilNextSpawn -= Time.fixedDeltaTime;
+            return;
         }
+
+        if (enemiesToSpawn.Count <= 0 && remainingEnemies <= 0)
+        {
+            StartCoroutine(WaitFornextWave());
+            return;
+        }
+
+        SpawnEnemy();
+
+        secondsUntilNextSpawn = spawnInterval;
+    }
+
+    private void SpawnEnemy()
+    {
+        if (enemiesToSpawn.Count <= 0)
+        {
+            return;
+        }
+
+        int random = UnityEngine.Random.Range(0, spawnPoints.Count);
+        Transform randomPoint = spawnPoints[random];
+
+        Instantiate(enemiesToSpawn[0], randomPoint.position, Quaternion.identity);
+        enemiesToSpawn.RemoveAt(0);
     }
 
     public void GenerateWave()
@@ -99,7 +110,7 @@ public class WaveSpawner : MonoBehaviour
             }
 
             int randomEnemyId = UnityEngine.Random.Range(0, affordableEnemies.Count);
-            int randomEnemyCost = wave.possibleEnemies[randomEnemyId].cost;
+            int randomEnemyCost = affordableEnemies[randomEnemyId].cost;
 
             if (wave.waveBudget - randomEnemyCost >= 0)
             {
@@ -123,7 +134,7 @@ public class WaveSpawner : MonoBehaviour
         return spawnPoints;
     }
 
-    // Serializable attribute lets us add and change in editor.
+    // Serializable attribute lets us add and change in editor. 
     [System.Serializable]
     public class Enemy
     {
