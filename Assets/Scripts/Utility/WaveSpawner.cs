@@ -50,7 +50,7 @@ public class WaveSpawner : MonoBehaviour
             // if theres enemies left to spawn
             if (enemiesToSpawn.Count > 0)
             {
-                int random = UnityEngine.Random.Range(0, spawnPoints.Count - 1);
+                int random = UnityEngine.Random.Range(0, spawnPoints.Count);
                 Transform randomPoint = spawnPoints[random];
 
                 Instantiate(enemiesToSpawn[0], randomPoint.position, Quaternion.identity);
@@ -98,7 +98,7 @@ public class WaveSpawner : MonoBehaviour
                 break;
             }
 
-            int randomEnemyId = UnityEngine.Random.Range(0, wave.possibleEnemies.Count);
+            int randomEnemyId = UnityEngine.Random.Range(0, affordableEnemies.Count);
             int randomEnemyCost = wave.possibleEnemies[randomEnemyId].cost;
 
             if (wave.waveBudget - randomEnemyCost >= 0)
