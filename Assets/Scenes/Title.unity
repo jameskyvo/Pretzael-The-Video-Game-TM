@@ -547,6 +547,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f8e8fce8741b4a80021261b06b3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonClick:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1645599780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,6 +750,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f8e8fce8741b4a80021261b06b3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonClick:
+    Guid:
+      Data1: 490559650
+      Data2: 1267549907
+      Data3: 1047684008
+      Data4: -1426074025
+    Path: event:/UI/UI Select
 --- !u!114 &1742276806
 MonoBehaviour:
   m_ObjectHideFlags: 0
