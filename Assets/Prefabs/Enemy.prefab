@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8875931446450134949}
   - component: {fileID: -2259246636801912339}
   - component: {fileID: 37903715414282027}
+  - component: {fileID: 6208924813414275209}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -217,6 +218,37 @@ MonoBehaviour:
     Path: event:/Enemy Sounds/Enemy Hit
   Event: 
   EventPlayTrigger: 9
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &6208924813414275209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573432126385764169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1036045206
+      Data2: 1224476929
+      Data3: -411156606
+      Data4: -404645825
+    Path: event:/Enemy Sounds/Enemy Death
+  Event: 
+  EventPlayTrigger: 2
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
