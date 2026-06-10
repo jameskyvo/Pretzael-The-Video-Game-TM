@@ -1,9 +1,11 @@
+using FMODUnity;
 using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 using static WaveSpawner;
 
 public class WaveSpawner : MonoBehaviour
@@ -11,15 +13,18 @@ public class WaveSpawner : MonoBehaviour
     public int currentWave;
     public int waveDuration;
     public int secondsBetweenWaves;
-    public float secondsUntilNextSpawn;
-    public int remainingEnemies;
     public List<Wave> waves = new List<Wave>();
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
 
+    private int remainingEnemies;
+    private float secondsUntilNextSpawn;
     private List<Transform> spawnPoints;
     private float spawnInterval = 1;
     private bool isProgressing = false;
     private GameObject player;
+
+    [SerializeField]
+    private StudioEventEmitter combatMusic;
 
     void Start()
     {
@@ -42,6 +47,7 @@ public class WaveSpawner : MonoBehaviour
     }
     void FixedUpdate()
     {
+        // TODO: This is expensive. Optimize later.
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         if (isProgressing || currentWave >= waves.Count || player == null)
