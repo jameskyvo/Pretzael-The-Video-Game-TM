@@ -24,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private StudioEventEmitter combatMusic;
+    private EventReference newWave;
 
     void Start()
     {
@@ -40,6 +40,11 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(secondsBetweenWaves);
 
         currentWave++;
+
+        if (currentWave < waves.Count - 1)
+        {
+            RuntimeManager.PlayOneShot(newWave);
+        }
 
         GenerateWave();
 

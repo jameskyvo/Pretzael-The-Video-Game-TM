@@ -1187,8 +1187,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &529137881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2694,13 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 4312718344753033860, guid: 57ed3e22573f6fc4eaa5e33a3ca8a6f8, type: 3}
       cost: 25
   enemiesToSpawn: []
-  spawnTimer: 2
+  newWave:
+    Guid:
+      Data1: 355396949
+      Data2: 1262852319
+      Data3: -1148020055
+      Data4: -287212107
+    Path: event:/Enemy Sounds/Enemy Wave Spawn
 --- !u!1 &1896611900
 GameObject:
   m_ObjectHideFlags: 0
