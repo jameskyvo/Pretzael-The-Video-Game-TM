@@ -16,6 +16,9 @@ public class WaveSpawner : MonoBehaviour
     public List<Wave> waves = new List<Wave>();
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
 
+    [HideInInspector]
+    public int maxWaves;
+
     private int remainingEnemies;
     private float secondsUntilNextSpawn;
     private List<Transform> spawnPoints;
@@ -30,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         spawnPoints = GetAllSpawnPoints();
+        maxWaves = waves.Count;
         GenerateWave();
     }
 
