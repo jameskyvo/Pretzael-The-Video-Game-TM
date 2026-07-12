@@ -32,7 +32,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (takingDamage)
+        if (takingDamage == true)
         {
             return;
         }
@@ -55,8 +55,8 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(damageCoolDownSeconds);
 
         spriteRenderer.color = defaultColor;
-
         takingDamage = false;
+
     }
 
     public void GameOver()
