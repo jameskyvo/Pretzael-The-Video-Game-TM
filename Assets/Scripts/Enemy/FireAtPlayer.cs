@@ -4,7 +4,7 @@ using UnityEngine;
 public class FireAtPlayer : MonoBehaviour
 {
     public GameObject shotPrefab;
-    public Transform firePoint;
+    public Transform[] firePoints;
     public int secondsBetweenBurstFire;
     public int attackCooldown;
 
@@ -32,7 +32,10 @@ public class FireAtPlayer : MonoBehaviour
 
         for (int i = 0; i < shotAmount; i++)
         {
-            Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
+            foreach(Transform firePoint in firePoints)
+            {
+                Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
+            }
             yield return new WaitForSeconds(secondsBetweenBurstFire);
         }
 
