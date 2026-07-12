@@ -1449,17 +1449,20 @@ MonoBehaviour:
     - Name: Pretzael State
       Value: 1
   TriggerEvent: 2
---- !u!114 &530877447 stripped
+--- !u!114 &530877454
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -5207363393111193969, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
-  m_PrefabInstance: {fileID: 1553231008}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530877438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 537bac96afe7842419da47bac83ec04a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c9ca727db1e9044db32db878ba3cebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
+  damageCoolDownSeconds: 0.25
 --- !u!1 &582977112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,13 +2518,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5207363393111193969, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6197924324928275429, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 530877446}
+    - targetCorrespondingSourceObject: {fileID: 6197924324928275429, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530877454}
   m_SourcePrefab: {fileID: 100100000, guid: 3c8389ac3b83bbd4db65fbf0f32ae8f5, type: 3}
 --- !u!1 &1649193347
 GameObject:
@@ -3178,7 +3185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a06ca0758f59bd547bb303fbe45e428a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 530877447}
+  playerHealth: {fileID: 530877454}
 --- !u!1 &1988765975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,7 +3952,6 @@ GameObject:
   - component: {fileID: 1433653005037288627}
   - component: {fileID: 2033254141965876783}
   - component: {fileID: 7082526929563453702}
-  - component: {fileID: 6512983427596519329}
   - component: {fileID: 8117269835971555756}
   - component: {fileID: 2097974788022426518}
   - component: {fileID: 5708818134195913453}
@@ -3990,20 +3996,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &6512983427596519329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4510417588063711662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 537bac96afe7842419da47bac83ec04a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  damageCoolDownSeconds: 0
 --- !u!50 &7082526929563453702
 Rigidbody2D:
   serializedVersion: 5

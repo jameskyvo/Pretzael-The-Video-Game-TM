@@ -22,12 +22,13 @@ public class Health : MonoBehaviour
     {
         if (health <= 0)
         {
-            if (gameObject.tag == "Player")
-            {
-                GameOver();
-            }
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    public virtual void Die()
+    {
+        Destroy(gameObject);
     }
 
     public void TakeDamage(int damage)
