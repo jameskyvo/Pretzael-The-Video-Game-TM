@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class MoveTowardsPlayer : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float maxSpeed;
+    public float minSpeed;
+    public float speed;
     private Transform playerTransform;
     private Rigidbody2D rb;
     private GameObject player;
@@ -15,6 +17,8 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
             return;
         }
+
+        speed = Random.Range(minSpeed, maxSpeed);
 
         playerTransform = player.transform;
         rb = GetComponent<Rigidbody2D>();

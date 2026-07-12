@@ -2715,7 +2715,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1893993853}
   - component: {fileID: 1893993854}
-  - component: {fileID: 1893993855}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -2793,22 +2792,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1893993855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893993852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c14d5f364c659bb498018c645318f7c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
-  secondsBetweenBurstFire: 0
-  attackCooldown: 0
 --- !u!1 &1896611900
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,7 +3663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd86fd1c0c2e20468c94b26aa98fec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  maxSpeed: 1
+  minSpeed: 2
 --- !u!114 &2628848856403081500
 MonoBehaviour:
   m_ObjectHideFlags: 0

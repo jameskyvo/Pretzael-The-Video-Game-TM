@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  damageCoolDownSeconds: 0
 --- !u!114 &8875931446450134949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd86fd1c0c2e20468c94b26aa98fec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  maxSpeed: 4
+  minSpeed: 1.5
+  speed: 0
 --- !u!114 &37903715414282027
 MonoBehaviour:
   m_ObjectHideFlags: 0
