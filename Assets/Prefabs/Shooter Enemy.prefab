@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 2105934611046483834, guid: 6dab66e34fe38d44ca0d6aad259b6323, type: 3}
-  firePoint: {fileID: 7503083066991292351}
+  firePoints:
+  - {fileID: 7503083066991292351}
   secondsBetweenBurstFire: 0
   attackCooldown: 3

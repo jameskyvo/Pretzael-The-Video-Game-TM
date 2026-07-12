@@ -7,7 +7,7 @@ public class HealthInformation : MonoBehaviour
     public Health playerHealth;
     private TextMeshProUGUI healthText;
     void Start()
-    {
+    {   
         healthText = GetComponent<TextMeshProUGUI>();
     }
 

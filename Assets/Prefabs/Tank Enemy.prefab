@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3879120550533359435}
   - component: {fileID: 9064376362457012800}
   - component: {fileID: 6108496652714559419}
-  - component: {fileID: 5497489939404026538}
   - component: {fileID: 7720254664506491766}
   - component: {fileID: 2388835143788498628}
   - component: {fileID: 7635872510299505197}
   - component: {fileID: 8783416268279073497}
+  - component: {fileID: -7873496391452794063}
   m_Layer: 0
   m_Name: Tank Enemy
   m_TagString: Enemy
@@ -157,20 +157,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5497489939404026538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7853579618951961699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 537bac96afe7842419da47bac83ec04a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  damageCoolDownSeconds: 0.5
 --- !u!114 &7720254664506491766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,3 +247,18 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &-7873496391452794063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853579618951961699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71842f7ed965adb47be925e71bd552c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  damageCoolDownSeconds: 0.5
+  objectToSpawn: {fileID: 8573432126385764169, guid: 016789e1095e19e4b9ad0789c05b4157, type: 3}
