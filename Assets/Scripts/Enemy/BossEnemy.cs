@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class BossEnemy : MonoBehaviour
 {
-    private GameObject player;
     public GameObject enemyPrefab;
     public int spawnCooldown;
     public int numToSpawn;
@@ -17,6 +16,7 @@ public class BossEnemy : MonoBehaviour
     public Transform firePoint;
     public int shotAmount = 3;
 
+    private GameObject player;
     private Rigidbody2D rb;
     private int verticalSpawnOffset;
     private Transform playerTransform;
