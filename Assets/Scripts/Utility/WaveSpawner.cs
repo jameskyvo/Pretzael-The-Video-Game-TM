@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 using static WaveSpawner;
@@ -18,6 +19,8 @@ public class WaveSpawner : MonoBehaviour
 
     [HideInInspector]
     public int maxWaves;
+
+    public int horizontalVariance;
 
     private int remainingEnemies;
     private float secondsUntilNextSpawn;
@@ -89,9 +92,13 @@ public class WaveSpawner : MonoBehaviour
         }
 
         int random = UnityEngine.Random.Range(0, spawnPoints.Count);
+        horizontalVariance = UnityEngine.Random.Range(-horizontalVariance, horizontalVariance);
         Transform randomPoint = spawnPoints[random];
 
-        Instantiate(enemiesToSpawn[0], randomPoint.position, Quaternion.identity);
+        Vector3 randomPosition = new Vector3(horizontalVariance + randomPoint.position.x, randomPoint.position.y);
+
+
+        Instantiate(enemiesToSpawn[0], randomPosition, Quaternion.identity);
         enemiesToSpawn.RemoveAt(0);
     }
 

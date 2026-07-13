@@ -2735,8 +2735,13 @@ MonoBehaviour:
       cost: 2
     - enemyPrefab: {fileID: 7853579618951961699, guid: 13cbf319d44ab64408ebd79bd73e9b6a, type: 3}
       cost: 5
+  - waveBudget: 1
+    possibleEnemies:
+    - enemyPrefab: {fileID: 4312718344753033860, guid: 57ed3e22573f6fc4eaa5e33a3ca8a6f8, type: 3}
+      cost: 1
   enemiesToSpawn: []
   maxWaves: 0
+  horizontalVariance: 60
   newWave:
     Guid:
       Data1: 355396949
