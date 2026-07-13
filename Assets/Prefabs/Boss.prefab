@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  damageCoolDownSeconds: 3
 --- !u!114 &8110288812725674975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +293,7 @@ MonoBehaviour:
   shotPrefab: {fileID: 2105934611046483834, guid: 6dab66e34fe38d44ca0d6aad259b6323, type: 3}
   firePoint: {fileID: 2369466854587710194}
   shotAmount: 3
+  chargeWindUpSeconds: 2
 --- !u!114 &8102193263343020058
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ public class BossEnemy : MonoBehaviour
     public GameObject shotPrefab;
     public Transform firePoint;
     public int shotAmount = 3;
+    public float chargeWindUpSeconds;
+
 
     private GameObject player;
     private Rigidbody2D rb;
@@ -24,6 +26,7 @@ public class BossEnemy : MonoBehaviour
     private bool isSpawning = false;
     private bool isFiring = false;
     private float secondsBetweenBurstFire = 0.2f;
+    private int shakeDampening = 4;
 
     private void Start()
     {
@@ -100,7 +103,8 @@ public class BossEnemy : MonoBehaviour
 
         isCharging = true;
 
-        // Shake camera
+        // Shake Boss
+        StartCoroutine(ShakeEnemy());
 
         // Play charge sound
 
@@ -155,5 +159,18 @@ public class BossEnemy : MonoBehaviour
         GameManager.instance.Victory();
     }
 
+    IEnumerator ShakeEnemy()
+    {
+        Vector2 startPosition = transform.position;
+        float elapsedTime = 0f;
 
+        while (elapsedTime < chargeWindUpSeconds)
+        {
+            elapsedTime += Time.deltaTime;
+            transform.position = startPosition + (Random.insideUnitCircle / shakeDampening);
+            yield return null;
+        }
+
+        transform.position = startPosition;
+    }
 }
