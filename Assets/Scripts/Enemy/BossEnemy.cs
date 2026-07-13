@@ -108,27 +108,15 @@ public class BossEnemy : MonoBehaviour
 
         // Play charge sound
 
-        // store current position
-        Vector3 originalPosition = transform.position;
         // Get direction to charge
-        Vector2 movementDir = GetDirectionToPlayer(originalPosition);
+        Vector2 movementDir = GetDirectionToPlayer(gameObject.transform.position);
         // move the distance
         rb.linearVelocity = movementDir * chargeSpeed;
         // wait x seconds
         yield return new WaitForSeconds(3f);
-        // return to original point
-        while (Vector2.Distance(transform.position, originalPosition) > 0.1f)
-        {
-            Vector2 returnDir =
-                (originalPosition - transform.position).normalized;
-
-            rb.linearVelocity = returnDir * chargeSpeed;
-
-            yield return null;
-        }
+        
 
         rb.linearVelocity = Vector2.zero;
-        transform.position = originalPosition;
 
         isCharging = false;
 
