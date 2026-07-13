@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color defaultColor;
     private bool takingDamage = false;
+    private bool isHealing = false;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -63,5 +65,19 @@ public class Health : MonoBehaviour
     public void GameOver()
     {
         GameManager.instance.GameOver();
+    }
+
+    internal void Heal(int healthAwarded)
+    {
+        if (isHealing == true)
+        {
+            return;
+        }
+
+        isHealing = true;
+
+        health += healthAwarded;
+
+        isHealing = false;
     }
 }
